@@ -2,8 +2,7 @@ name: Islamic Bot Auto Poster
 
 on:
   schedule:
-    # كل 3 ساعات (بتوقيت جرينتش)
-    # 0 */3 * * * تعني: الساعة 0، 3، 6، 9... وهكذا
+    # يعمل كل 3 ساعات (بتوقيت جرينتش)
     - cron: '0 */3 * * *'
   workflow_dispatch: # زر للتشغيل اليدوي للتجربة
 
@@ -39,7 +38,7 @@ jobs:
         run: |
           git config --global user.name "Bot Keeper"
           git config --global user.email "bot@github.com"
-          git add *.json
+          git add *.json || echo "No json files found yet"
           # الأمر التالي يضمن عدم حدوث خطأ لو مفيش تغييرات
           git commit -m "Update bot history and stats" || echo "No changes to commit"
           git push
