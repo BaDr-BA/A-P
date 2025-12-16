@@ -1,0 +1,16 @@
+{
+    "total_posts": 1,
+    "successful_posts": 1,
+    "failed_posts": 0,
+    "adhkar_posts": 0,
+    "content_posts": 0,
+    "questions_posts": 1,
+    "last_post_time": "2025-12-16T21:47:37.517630",
+    "post_types": {
+        "morning": 0,
+        "evening": 0,
+        "long": 0,
+        "short": 0,
+        "question": 1
+    }
+}
