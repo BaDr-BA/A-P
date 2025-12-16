@@ -1,0 +1,45 @@
+name: Islamic Bot Auto Poster
+
+on:
+  schedule:
+    # كل 3 ساعات (بتوقيت جرينتش)
+    # 0 */3 * * * تعني: الساعة 0، 3، 6، 9... وهكذا
+    - cron: '0 */3 * * *'
+  workflow_dispatch: # زر للتشغيل اليدوي للتجربة
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    
+    # منح صلاحيات الكتابة للكود عشان يحفظ ملفات الـ JSON
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Bot Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          PAGE_ID: ${{ secrets.PAGE_ID }}
+        run: python main.py
+
+      - name: Commit and Push Changes (Save Memory)
+        run: |
+          git config --global user.name "Bot Keeper"
+          git config --global user.email "bot@github.com"
+          git add *.json
+          # الأمر التالي يضمن عدم حدوث خطأ لو مفيش تغييرات
+          git commit -m "Update bot history and stats" || echo "No changes to commit"
+          git push
