@@ -2,15 +2,22 @@ name: Islamic Bot Auto Poster
 
 on:
   schedule:
-    # يعمل كل 3 ساعات (بتوقيت جرينتش)
-    - cron: '0 */3 * * *'
-  workflow_dispatch: # زر للتشغيل اليدوي للتجربة
+    # يعمل كل ساعتين (لضمان التقاط كل الأوقات)
+    - cron: '15 */3 * * *'
+  workflow_dispatch:
+
+# التحسين 1: منع التداخل (Concurrency)
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     
-    # منح صلاحيات الكتابة للكود عشان يحفظ ملفات الـ JSON
+    # التحسين 2: وقت مستقطع (Timeout) لحماية الرصيد
+    timeout-minutes: 15
+    
     permissions:
       contents: write
 
@@ -22,6 +29,8 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          # التحسين 3: التخزين المؤقت (Caching) لتسريع التثبيت
+          cache: 'pip'
 
       - name: Install Libraries
         run: |
@@ -34,11 +43,14 @@ jobs:
           PAGE_ID: ${{ secrets.PAGE_ID }}
         run: python main.py
 
-      - name: Commit and Push Changes (Save Memory)
+      - name: Commit and Push Changes (Safe Mode)
         run: |
           git config --global user.name "Bot Keeper"
           git config --global user.email "bot@github.com"
-          git add *.json || echo "No json files found yet"
-          # الأمر التالي يضمن عدم حدوث خطأ لو مفيش تغييرات
-          git commit -m "Update bot history and stats" || echo "No changes to commit"
+          
+          # سحب أي تغييرات جديدة أولاً لتجنب التصادم
+          git pull --rebase --autostash
+          
+          git add *.json || echo "No json files found"
+          git commit -m "Update bot history [skip ci]" || echo "No changes to commit"
           git push
