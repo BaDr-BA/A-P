@@ -393,42 +393,82 @@ def get_trending_topic_with_grounding(base_category):
 
     return None, None
 
-# ============== 🎨 (الجديد) دالة وصف الصورة لـ Pollinations ==============
+# ============== 🎨 دالة وصف الصورة لـ Pollinations (النسخة الكاملة) ==============
 def generate_image_prompt(text):
     """
-    يحلل النص ويطلب من Gemini وصفاً بالإنجليزية للصورة
+    يقرأ النص العربي كاملاً لاستخلاص أدق وصف للمشهد
     """
+    # لاحظ هنا: شلنا الـ [:500] وحطينا text زي ما هو
     prompt = f"""
-    Read this Arabic text: "{text[:400]}..."
-    Task: Write a detailed vivid description in English for a background image suitable for this text.
-    STRICT RULES:
-    1. NO humans, NO faces, NO text in the image.
-    2. Focus on: Nature, Light, Mosques, Sky, Abstract Islamic art.
-    3. Output ONLY the English description.
+    Role: Elite AI Art Prompt Engineer with advanced Arabic comprehension.
+
+    Task:
+    1. Carefully read the FULL Arabic text provided: "{text}" from beginning to end.
+    2. Re-read the text multiple times until you fully understand:
+    - The complete meaning (explicit and implicit)
+    - The emotional tone
+    - The spiritual or moral message
+    - The final conclusion or lesson
+    3. Extract the single most powerful symbolic idea that represents the entire text accurately.
+
+    Your goal:
+    Create ONE precise English image prompt that visually represents the FULL meaning of the Arabic text with 100% fidelity, without distortion, omission, or added interpretation.
+
+    ABSOLUTE & NON-NEGOTIABLE RULES:
+    - NO text, NO letters, NO numbers, NO calligraphy of any kind inside the image.
+    - NO women at all (no female figures, no silhouettes, no shadows).
+    - NO immodesty or prohibited content in any form.
+    - Humans are allowed ONLY as:
+    - Silhouettes, OR
+    - Back-view figures with NO visible facial details.
+    - The image must be respectful, modest, and spiritually appropriate.
+
+    STYLE REQUIREMENTS:
+    - Cinematic lighting
+    - Hyper-realistic
+    - 8K resolution
+    - Deep spiritual and emotional atmosphere
+    - Serious, contemplative mood
+
+    OUTPUT CONSTRAINTS:
+    - Output ONLY the English image prompt.
+    - Maximum length: 70 words.
+    - No explanations, no comments, no titles, no extra text.
     """
+    
     description = generate_gemini_content_direct(prompt)
-    if "Error" in description: return "Beautiful serene islamic nature landscape mosque at sunset cinematic lighting"
+    
+    # التعامل مع الأخطاء
+    if "Error" in description or len(description) < 5: 
+        return "Beautiful serene islamic nature landscape, mosque silhouette at sunset, golden hour, cinematic lighting, 8k, highly detailed"
+    
     return description
 
-# ============== 🎨 (الجديد) دالة توليد الصورة Pollinations ==============
+# ============== 🎨 دالة توليد الصورة Pollinations (المعدلة) ==============
 def generate_pollinations_image(prompt):
     """
     يقوم بتوليد الصورة وتحميلها محلياً
     """
     try:
-        # تنظيف البرومبت للرابط
-        safe_prompt = requests.utils.quote(prompt[:200]) # نأخذ أول 200 حرف فقط لتجنب الأخطاء
-        url = f"https://image.pollinations.ai/prompt/{safe_prompt}?width=1080&height=1080&nologo=true"
+        # هنا التعديل: جعلنا الحد 800 حرف بدلاً من 200
+        # هذا يسمح بوصف تفصيلي دقيق دون أن يقطع الرابط
+        safe_prompt = requests.utils.quote(prompt[:800]) 
         
-        response = requests.get(url, timeout=40)
+        url = f"https://image.pollinations.ai/prompt/{safe_prompt}?width=1080&height=1080&nologo=true&model=flux"
+        # أضفت &model=flux للحصول على جودة أعلى إذا كان متاحاً، أو سيستخدم الافتراضي
+        
+        response = requests.get(url, timeout=50) # زودنا وقت الانتظار لـ 50 ثانية
         if response.status_code == 200:
             image_path = os.path.join(BASE_DIR, "temp_post_image.jpg")
             with open(image_path, "wb") as f:
                 f.write(response.content)
             logger.info("✅ تم تحميل صورة Pollinations بنجاح")
             return image_path
+        else:
+            logger.error(f"❌ فشل تحميل الصورة، الكود: {response.status_code}")
+
     except Exception as e:
-        logger.error(f"❌ فشل تحميل الصورة: {e}")
+        logger.error(f"❌ خطأ استثنائي في تحميل الصورة: {e}")
     
     return None
 
@@ -704,4 +744,5 @@ if __name__ == '__main__':
     for file in [HISTORY_FILE, STATS_FILE, POSTS_FILE]:
         if not os.path.exists(file):
             with open(file, 'w', encoding='utf-8') as f: json.dump([], f)
+
     run_bot()
