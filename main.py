@@ -693,7 +693,8 @@ def run_bot():
                 
                 # ... تكملة كود جلب الموضوع والتوليد كما هو ...
                 topic, keywords = get_trending_topic_with_grounding(base_category)
-                if not topic: topic = base_category
+                if not topic: 
+                    topic = base_category
                     keywords = topic.split()[0] if topic else "ديني"                
 
                 selected_topic = topic
@@ -813,4 +814,5 @@ if __name__ == '__main__':
             with open(file, 'w', encoding='utf-8') as f: json.dump([], f)
 
     run_bot()
+
 
