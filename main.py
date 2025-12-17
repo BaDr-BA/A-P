@@ -808,11 +808,25 @@ def run_bot():
         logger.error(f"خطأ غير متوقع في تشغيل البوت: {e}")
 
 if __name__ == '__main__':
-    # تهيئة الملفات
-    for file in [HISTORY_FILE, STATS_FILE, POSTS_FILE]:
-        if not os.path.exists(file):
-            with open(file, 'w', encoding='utf-8') as f: json.dump([], f)
+    # 1. تهيئة ملف الإحصائيات (قاموس)
+    if not os.path.exists(STATS_FILE):
+        default_stats = {
+            'total_posts': 0, 'successful_posts': 0, 'failed_posts': 0,
+            'adhkar_posts': 0, 'content_posts': 0, 'questions_posts': 0,
+            'last_post_time': None,
+            'post_types': {'morning': 0, 'evening': 0, 'long': 0, 'short': 0, 'question': 0}
+        }
+        with open(STATS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(default_stats, f, ensure_ascii=False, indent=4)
+
+    # 2. تهيئة ملف السجل (قاموس)
+    if not os.path.exists(HISTORY_FILE):
+        with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
+            json.dump({'topics': [], 'adhkar_dates': []}, f, ensure_ascii=False, indent=4)
+
+    # 3. تهيئة ملف أرشيف المنشورات (قائمة)
+    if not os.path.exists(POSTS_FILE):
+        with open(POSTS_FILE, 'w', encoding='utf-8') as f:
+            json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
-
-
