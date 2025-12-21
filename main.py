@@ -457,11 +457,8 @@ def generate_image_prompt(text):
 
     ABSOLUTE & NON-NEGOTIABLE RULES:
     - NO text, NO letters, NO numbers, NO calligraphy of any kind inside the image.
-    - NO women at all (no female figures, no silhouettes, no shadows).
+    - NO women at all (no female figures, no silhouettes of women, no shadows of women).
     - NO immodesty or prohibited content in any form.
-    - Humans are allowed ONLY as:
-    - Silhouettes, OR
-    - Back-view figures with NO visible facial details.
     - The image must be respectful, modest, and spiritually appropriate.
 
     STYLE REQUIREMENTS:
@@ -830,3 +827,4 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
