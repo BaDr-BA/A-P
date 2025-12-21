@@ -461,6 +461,7 @@ def generate_image_prompt(text):
     - NO women at all (no female figures, no silhouettes of women, no shadows of women).
     - NO immodesty or prohibited content in any form.
     - The image must be respectful, modest, and spiritually appropriate.
+    - The character is not allowed to wear earrings, a necklace, or a hair clip.
 
     STYLE REQUIREMENTS:
     - Cinematic lighting
@@ -828,5 +829,6 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
