@@ -462,6 +462,7 @@ def generate_image_prompt(text):
     - NO immodesty or prohibited content in any form.
     - The image must be respectful, modest, and spiritually appropriate.
     - The character is not allowed to wear earrings, a necklace, or a hair clip.
+    - The presence of a cross in the image is prohibited.
 
     STYLE REQUIREMENTS:
     - Cinematic lighting
@@ -829,6 +830,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
