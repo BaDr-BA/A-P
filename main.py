@@ -730,9 +730,13 @@ def run_bot():
                         part1 = f"اكتب سؤالاً دينياً تفاعلياً واحداً للنقاش على فيسبوك يدور حول {combined_occasion}. السؤال يجب أن يكون عميقاً ومحفزاً للتعليقات. بدون مقدمات."
                     else:
                         # (القديم) السؤال العام
-                        part1 = "اكتب سؤالا دينيا تفاعليا واحدا فقط للمتابعين على فيسبوك لزيادة التعليقات. السؤال يجب أن يكون عميقا ومؤثرا. بدون مقدمات."
+                        part1 = "اكتب سؤالا دينيا تفاعليا واحدا فقط للمتابعين على فيسبوك لزيادة التعليقات. السؤال يجب أن يكون عميقا ومؤثرا أو بسيطا. بدون مقدمات."
                     
                     post_content = generate_gemini_content_direct(part1)
+
+                    # توليد صورة علامة استفهام مميزة للسؤال
+                    question_img_prompt = "A giant, 3D, golden question mark in the center, mysterious dark background, cinematic lighting, 8k resolution, highly detailed, no text, spiritual atmosphere"
+                    image_path = generate_pollinations_image(question_img_prompt)
 
                 else:
                     # ==================== ب. مسار المحتوى القصير ====================
@@ -783,11 +787,6 @@ def run_bot():
                         ]
                     
                     post_content = generate_gemini_content_direct(random.choice(simple_prompts))
-                
-                # صورة للمحتوى القصير/السؤال (احتمال 50%)
-                if random.random() < 0.5:
-                    img_prompt = generate_image_prompt(post_content)
-                    image_path = generate_pollinations_image(img_prompt)
 
         # النشر على فيسبوك
         if post_content and len(post_content) > 10 and "Error" not in post_content:
@@ -830,6 +829,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
