@@ -358,5 +358,11 @@
         "type": "short",
         "content_preview": "حسن الظن بالله عبادة.",
         "success": true
+    },
+    {
+        "timestamp": "2025-12-22T21:29:00.938425",
+        "type": "question",
+        "content_preview": "إذا كان بإمكانك أن تسأل الله سؤالًا واحدًا فقط، ما هو هذا السؤال الذي يشغل بالك؟",
+        "success": true
     }
 ]
