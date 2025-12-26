@@ -1,15 +1,15 @@
 {
-    "total_posts": 84,
-    "successful_posts": 84,
+    "total_posts": 85,
+    "successful_posts": 85,
     "failed_posts": 0,
     "adhkar_posts": 18,
-    "content_posts": 57,
+    "content_posts": 58,
     "questions_posts": 9,
-    "last_post_time": "2025-12-26T09:34:43.573127",
+    "last_post_time": "2025-12-26T13:02:16.506328",
     "post_types": {
         "morning": 9,
         "evening": 9,
-        "long": 21,
+        "long": 22,
         "short": 36,
         "question": 9
     }
