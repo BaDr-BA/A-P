@@ -548,9 +548,12 @@ def post_to_facebook(message, image_path=None):
         logger.error(f"خطأ استثنائي في النشر: {e}")
         return False
     finally:
-        # تنظيف: حذف الصورة بعد النشر
+        # تنظيف: حذف الصورة فقط إذا كانت مؤقتة (تبدأ بـ temp)
+        # أما صور المصحف الأصلية فلا نحذفها
         if image_path and os.path.exists(image_path):
-            os.remove(image_path)
+            filename = os.path.basename(image_path)
+            if filename.startswith("temp"):
+                os.remove(image_path)
 
 # ============== تنظيف النص ==============
 def clean_post_text(text):
@@ -622,6 +625,101 @@ def get_adhkar_with_dynamic_intro(adhkar_type):
     final_post = f"{dynamic_intro}\n\n✨ أذكار {time_name} كاملة:\n{fixed_text}"
     return final_post
 
+# ============== 📖 دالة ورد القرآن (الذكية والشاملة) ==============
+def get_next_quran_page_data():
+    """
+    تجلب الصفحة التالية من مجلد quran_pages الموجود داخل المستودع نفسه
+    """
+    history = load_history()
+    last_page = history.get('last_quran_page', 0)
+    current_page = last_page + 1
+
+    # إعادة الختمة إذا وصلنا لآخر صفحة
+    if current_page > 604:
+        current_page = 1
+
+    # تنسيق الرقم
+    possible_filenames = [
+        f"{current_page}.jpg",       # الحالة بتاعتك: 1.jpg
+        f"{current_page:03}.jpg",    # الحالة القياسية: 001.jpg
+        f"{current_page}.png",       # احتياطي png
+        f"{current_page:03}.png"     # احتياطي png مرقم
+    ]
+    
+    found_path = None
+
+    for filename in possible_filenames:
+        check_path = os.path.join(BASE_DIR, 'quran_pages', filename)
+        if os.path.exists(check_path):
+            found_path = check_path
+            break
+    
+    if found_path:
+        logger.info(f"✅ تم العثور على صفحة المصحف: {found_path}")
+        return current_page, found_path
+    else:
+        logger.error(f"❌ خطأ: لم يتم العثور على صورة الصفحة رقم {current_page} داخل مجلد quran_pages")
+        # طباعة المسارات التي حاول البحث فيها للمساعدة في التشخيص
+        logger.info(f"حاولت البحث عن: {possible_filenames}")
+        return None, None
+
+# ============== 🏷️ دالة تحديد اسم السورة (للهاشتاج) ==============
+def get_surah_hashtag(page_number):
+    """
+    تحدد اسم السورة (أو السور) بناءً على رقم الصفحة
+    """
+    # الخريطة الآن تربط رقم الصفحة بـ "قائمة" سور
+    surah_map = {
+        1: ["الفاتحة"], 2: ["البقرة"], 50: ["آل_عمران"], 77: ["النساء"],
+        106: ["المائدة"], 128: ["الأنعام"], 151: ["الأعراف"], 177: ["الأنفال"],
+        187: ["التوبة"], 208: ["يونس"], 221: ["هود"], 235: ["يوسف"],
+        249: ["الرعد"], 255: ["إبراهيم"], 262: ["الحجر"], 267: ["النحل"],
+        282: ["الإسراء"], 293: ["الكهف"], 305: ["مريم"], 312: ["طه"],
+        322: ["الأنبياء"], 332: ["الحج"], 342: ["المؤمنون"], 350: ["النور"],
+        359: ["الفرقان"], 367: ["الشعراء"], 377: ["النمل"], 385: ["القصص"],
+        396: ["العنكبوت"], 404: ["الروم"], 411: ["لقمان"], 415: ["السجدة"],
+        418: ["الأحزاب"], 428: ["سبأ"], 434: ["فاطر"], 440: ["يس"],
+        446: ["الصافات"], 453: ["ص"], 458: ["الزمر"], 467: ["غافر"],
+        477: ["فصلت"], 483: ["الشورى"], 489: ["الزخرف"], 496: ["الدخان"],
+        499: ["الجاثية"], 502: ["الأحقاف"], 507: ["محمد"], 511: ["الفتح"],
+        515: ["الحجرات"], 518: ["ق"], 520: ["الذاريات"], 523: ["الطور"],
+        526: ["النجم"], 528: ["القمر"], 531: ["الرحمن"], 534: ["الواقعة"],
+        537: ["الحديد"], 542: ["المجادلة"], 545: ["الحشر"], 549: ["الممتحنة"],
+        551: ["الصف"], 553: ["الجمعة"], 554: ["المنافقون"], 556: ["التغابن"],
+        558: ["الطلاق"], 560: ["التحريم"], 562: ["الملك"], 564: ["القلم"],
+        566: ["الحاقة"], 568: ["المعارج"], 570: ["نوح"], 572: ["الجن"],
+        574: ["المزمل"], 575: ["المدثر"], 577: ["القيامة"], 578: ["الإنسان"],
+        580: ["المرسلات"], 582: ["النبأ"], 583: ["النازعات"], 585: ["عبس"],
+        586: ["التكوير"], 587: ["الانفطار", "المطففين"], 589: ["الانشقاق"],
+        590: ["البروج"], 591: ["الطارق", "الأعلى"], 592: ["الغاشية"],
+        593: ["الفجر"], 594: ["البلد"], 595: ["الشمس", "الليل"],
+        596: ["الضحى", "الشرح"], 597: ["التين", "العلق"],
+        598: ["القدر", "البينة"], 599: ["الزلزلة", "العاديات"],
+        600: ["القارعة", "التكاثر"], 
+        601: ["العصر", "الهمزة", "الفيل"],
+        602: ["قريش", "الماعون", "الكوثر"],
+        603: ["الكافرون", "النصر", "المسد"],
+        604: ["الإخلاص", "الفلق", "الناس"]
+    }
+
+    # البحث عن السورة المناسبة للصفحة الحالية
+    # نقوم بترتيب الصفحات تصاعدياً ونأخذ آخر سورة بدأت قبل أو في هذه الصفحة
+    current_surahs = ["القرآن_الكريم"]
+    
+    # ترتيب المفاتيح لضمان البحث الصحيح
+    sorted_pages = sorted(surah_map.keys())
+    
+    for start_page in sorted_pages:
+        if page_number >= start_page:
+            current_surahs = surah_map[start_page]
+        else:
+            break
+            
+    # تجميع الهاشتاجات بمسافات
+    # النتيجة ستكون مثل: #سورة_النبأ أو #سورة_الإخلاص #سورة_الفلق #سورة_الناس
+    hashtags = " ".join([f"#سورة_{name}" for name in current_surahs])
+    return hashtags
+
 # ============== الدالة الرئيسية لتشغيل البوت ==============
 def run_bot():
     try:
@@ -640,14 +738,35 @@ def run_bot():
             if not check_adhkar_posted_today('morning'):
                 post_content = get_adhkar_with_dynamic_intro('morning')
                 content_type = "morning"
+
+        # 2. 📖 ورد القرآن (العصرية: الساعة 13 إلى 15 أي 1 ظهراً لـ 3:59 عصراً)
+        elif 13 <= current_hour <= 15: 
+            # نتحقق هل تم نشر الورد اليوم أم لا
+            if not check_adhkar_posted_today('quran_wird'):
+                logger.info("بدء تجهيز ورد القرآن اليومي...")
+                page_num, quran_img_path = get_next_quran_page_data()
+                
+                if page_num and quran_img_path:
+                    # توليد النص
+                    text_intro = generate_wird_text(page_num)
+                    
+                    # 🔥 هنا الإضافة: جلب اسم السورة كهاشتاج
+                    surah_hashtag = get_surah_hashtag(page_num)
+                    
+                    if "Error" not in text_intro:
+                        post_content = f"📖 وردك اليومي من القرآن الكريم\nالصفحة رقم: {page_num}\n\n{text_intro}\n\n{surah_hashtag} #القرآن_الكريم #ورد_يومي #تدبر"
+                        image_path = quran_img_path
+                        content_type = "quran_wird"
+                        
+                        # ملاحظة: سيتم تحديث رقم الصفحة في السجل فقط إذا نجح النشر في الأسفل
         
-        # 2. الأذكار (المساء 16-18)
+        # 3. الأذكار (المساء 16-18)
         elif 16 <= current_hour <= 18:
             if not check_adhkar_posted_today('evening'):
                 post_content = get_adhkar_with_dynamic_intro('evening')
                 content_type = "evening"
             
-        # 3. محتوى ذكي (يدمج المناسبات)
+        # 4. محتوى ذكي (يدمج المناسبات)
         if not post_content:
             # جلب كل السياقات الحالية
             current_contexts = get_current_islamic_context()
@@ -794,6 +913,17 @@ def run_bot():
 
             # النشر
             success = post_to_facebook(cleaned_content, image_path)
+            
+            if success:
+                # إذا كان النوع ورد قرآن، نقوم بتحديث رقم الصفحة في السجل الآن
+                if content_type == "quran_wird":
+                    # نستخرج رقم الصفحة من النص أو نعيد جلبه (الأفضل تمريره، لكن للتبسيط سنعيد منطق الحساب)
+                    # هنا سنقوم باستدعاء دالة التحديث التي أنشأناها بالأعلى
+                    # ملاحظة: نحن بحاجة لمعرفة رقم الصفحة الذي تم نشره لتخزينه
+                    # سنجلبه من history القديم + 1
+                    hist = load_history()
+                    last = hist.get('last_quran_page', 0)
+                    update_quran_history(last + 1)
 
             # تسجيل الإحصائيات
             stats.record_post(content_type, success)
@@ -801,7 +931,7 @@ def run_bot():
             # حفظ في السجل
             save_post_to_history(content_type, cleaned_content, success)
         else:
-            logger.info("لم يتم النشر (إما تم نشر الأذكار سابقاً أو خطأ في التوليد)")
+            logger.info("لم يتم النشر (إما تم نشر سابقاً أو الوقت غير مناسب أو خطأ في التوليد)")
 
     except Exception as e:
         logger.error(f"خطأ غير متوقع في تشغيل البوت: {e}")
@@ -829,6 +959,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
