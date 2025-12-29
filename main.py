@@ -720,6 +720,19 @@ def get_surah_hashtag(page_number):
     hashtags = " ".join([f"#سورة_{name}" for name in current_surahs])
     return hashtags
 
+# ============== ✍️ دالة توليد نص الورد ==============
+def generate_wird_text(page_number):
+    """
+    توليد نص تشجيعي لقراءة الورد اليومي
+    """
+    prompt = f"""
+    اكتب منشوراً قصيراً جداً (سطر أو سطرين) للفيسبوك.
+    المحتوى: تذكير لطيف وحماسي لمتابعي الصفحة بقراءة ورد القرآن اليومي (الصفحة رقم {page_number}).
+    الأسلوب: روحاني، محفز، دافيء، وبدون أي مقدمات مثل "إليك المنشور".
+    خاتمة: دعاء قصير بقبول العمل.
+    """
+    return generate_gemini_content_direct(prompt)
+
 # ============== الدالة الرئيسية لتشغيل البوت ==============
 def run_bot():
     try:
@@ -959,6 +972,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
