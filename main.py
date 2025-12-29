@@ -61,15 +61,19 @@ class BotStatistics:
         else:
             self.stats['failed_posts'] += 1
 
-        if post_type in ['morning', 'evening']:
+        if post_type in ['morning', 'evening', 'quran_wird']:
             self.stats['adhkar_posts'] += 1
         elif post_type in ['long', 'short']:
             self.stats['content_posts'] += 1
         elif post_type == 'question':
             self.stats['questions_posts'] += 1
 
+        # إذا كان النوع موجود في القائمة نزوده، لو مش موجود ننشئه
         if post_type in self.stats['post_types']:
             self.stats['post_types'][post_type] += 1
+        else:
+            # إنشاء مفتاح جديد للنوع الجديد تلقائياً
+            self.stats['post_types'][post_type] = 1
 
         self.stats['last_post_time'] = datetime.datetime.now().isoformat()
         self.save_stats()
@@ -993,6 +997,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
