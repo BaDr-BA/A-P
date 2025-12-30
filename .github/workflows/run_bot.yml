@@ -3,7 +3,7 @@ name: Islamic Bot Auto Poster
 on:
   schedule:
     # يعمل كل 3 ساعات
-    - cron: '15 */3 * * *'
+    - cron: '15 */4 * * *'
   workflow_dispatch:
 
 # التحسين 1: منع التداخل (Concurrency)
