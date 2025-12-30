@@ -1000,13 +1000,3 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
-
-
-
-
-
-
-
-
-
-
