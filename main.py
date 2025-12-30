@@ -760,6 +760,9 @@ def update_quran_history(page_number):
 
 # ============== الدالة الرئيسية لتشغيل البوت ==============
 def run_bot():
+    # القيمة الافتراضية "مجهول" لكي يسمح بالنشر العام إذا انتهت المهام الخاصة
+    content_type = "unknown"
+    
     try:
         now = get_current_time_cairo()
         current_hour = now.hour
@@ -769,13 +772,12 @@ def run_bot():
 
         post_content = ""
         image_path = None
-        content_type = "unknown"
         
         # 1. الأذكار (الصباح 5-7)
         if 5 <= current_hour <= 7:
             if not check_adhkar_posted_today('morning'):
-                post_content = get_adhkar_with_dynamic_intro('morning')
                 content_type = "morning"
+                post_content = get_adhkar_with_dynamic_intro('morning')
 
         # 2. 📖 ورد القرآن (العصرية: الساعة 13 إلى 15 أي 1 ظهراً لـ 3:59 عصراً)
         elif 13 <= current_hour <= 15: 
@@ -785,27 +787,22 @@ def run_bot():
                 page_num, quran_img_path = get_next_quran_page_data()
                 
                 if page_num and quran_img_path:
-                    # توليد النص
                     text_intro = generate_wird_text(page_num)
-                    
-                    # 🔥 هنا الإضافة: جلب اسم السورة كهاشتاج
                     surah_hashtag = get_surah_hashtag(page_num)
                     
                     if "Error" not in text_intro:
+                        content_type = "quran_wird"
                         post_content = f"📖 وردك اليومي من القرآن الكريم\nالصفحة رقم: {page_num}\n\n{text_intro}\n\n{surah_hashtag} #القرآن_الكريم #ورد_يومي #تدبر"
                         image_path = quran_img_path
-                        content_type = "quran_wird"
-                        
-                        # ملاحظة: سيتم تحديث رقم الصفحة في السجل فقط إذا نجح النشر في الأسفل
         
         # 3. الأذكار (المساء 16-18)
         elif 16 <= current_hour <= 18:
             if not check_adhkar_posted_today('evening'):
-                post_content = get_adhkar_with_dynamic_intro('evening')
                 content_type = "evening"
+                post_content = get_adhkar_with_dynamic_intro('evening')
             
         # 4. محتوى ذكي (يدمج المناسبات)
-        if not post_content:
+        if not post_content and content_type == "unknown":
             # جلب كل السياقات الحالية
             current_contexts = get_current_islamic_context()
             combined_occasion = None
@@ -876,7 +873,6 @@ def run_bot():
                 
             else:
                 # ==================== مسار المنشورات الخفيفة (75%) ====================
-                
                 # إرجاع منطق الـ 30% للسؤال و 70% للقصير
                 if random.random() < 0.3:
                     # ==================== أ. مسار السؤال التفاعلي ====================
@@ -955,24 +951,31 @@ def run_bot():
             if success:
                 # إذا كان النوع ورد قرآن، نقوم بتحديث رقم الصفحة في السجل الآن
                 if content_type == "quran_wird":
-                    # نستخرج رقم الصفحة من النص أو نعيد جلبه (الأفضل تمريره، لكن للتبسيط سنعيد منطق الحساب)
-                    # هنا سنقوم باستدعاء دالة التحديث التي أنشأناها بالأعلى
-                    # ملاحظة: نحن بحاجة لمعرفة رقم الصفحة الذي تم نشره لتخزينه
-                    # سنجلبه من history القديم + 1
                     hist = load_history()
                     last = hist.get('last_quran_page', 0)
                     update_quran_history(last + 1)
 
-            # تسجيل الإحصائيات
-            stats.record_post(content_type, success)
+                # تسجيل الإحصائيات
+                stats.record_post(content_type, success=True)
 
-            # حفظ في السجل
-            save_post_to_history(content_type, cleaned_content, success)
+                # حفظ في السجل
+                save_post_to_history(content_type, cleaned_content, success=True)
+            else:
+                    logger.error("لم يتم النشر (إما تم نشر سابقاً أو الوقت غير مناسب أو خطأ في التوليد)")
+                    stats.record_post(content_type, success=False)
+
         else:
-            logger.info("لم يتم النشر (إما تم نشر سابقاً أو الوقت غير مناسب أو خطأ في التوليد)")
-
+            # تسجيل الفشل فقط إذا كنا نحاول نشر شيء محدد وفشلنا
+            if content_type != "unknown":
+                 logger.warning(f"فشل توليد المحتوى للنوع: {content_type}")
+                 stats.record_post(content_type, success=False)
+            else:
+                logger.info("لا يوجد محتوى للنشر حالياً")    
+    
     except Exception as e:
         logger.error(f"خطأ غير متوقع في تشغيل البوت: {e}")
+        if content_type != "unknown":
+            stats.record_post(content_type, success=False)
 
 if __name__ == '__main__':
     # 1. تهيئة ملف الإحصائيات (قاموس)
@@ -997,6 +1000,7 @@ if __name__ == '__main__':
             json.dump([], f, ensure_ascii=False, indent=4)
 
     run_bot()
+
 
 
 
