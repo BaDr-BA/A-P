@@ -743,18 +743,8 @@ def update_quran_history(page_number):
     تحديث سجل آخر صفحة تم نشرها لضمان التسلسل
     """
     history = load_history()
+    # تحديث رقم الصفحة فقط
     history['last_quran_page'] = page_number
-    # تسجيل أننا نشرنا الورد اليوم لمنع التكرار
-    today_str = datetime.datetime.now().strftime('%Y-%m-%d')
-    if 'adhkar_dates' not in history:
-        history['adhkar_dates'] = []
-    
-    # نضيف العلامة المميزة للورد
-    history['adhkar_dates'].append(f"{today_str}_quran_wird")
-    
-    # نحتفظ بآخر 30 سجل فقط لعدم تضخم الملف
-    if len(history['adhkar_dates']) > 30:
-        history['adhkar_dates'] = history['adhkar_dates'][-30:]
         
     save_history(history)
 
