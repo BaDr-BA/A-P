@@ -12,7 +12,6 @@
         "الجمعة: نافذة للتسامح وتجديد العهد"
     ],
     "adhkar_dates": [
-        "2025-12-21_evening",
         "2025-12-22_morning",
         "2025-12-22_evening",
         "2025-12-23_morning",
@@ -41,7 +40,8 @@
         "2026-01-01_evening",
         "2026-01-02_morning",
         "2026-01-02_quran_wird",
-        "2026-01-02_evening"
+        "2026-01-02_evening",
+        "2026-01-03_morning"
     ],
     "last_quran_page": 5
 }
