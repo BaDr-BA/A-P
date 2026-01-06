@@ -12,7 +12,6 @@
         "دعاء شامل لمتغيرات العصر"
     ],
     "adhkar_dates": [
-        "2025-12-26_evening",
         "2025-12-27_morning",
         "2025-12-27_evening",
         "2025-12-28_morning",
@@ -41,7 +40,8 @@
         "2026-01-05_morning",
         "2026-01-05_quran_wird",
         "2026-01-05_evening",
-        "2026-01-06_morning"
+        "2026-01-06_morning",
+        "2026-01-06_quran_wird"
     ],
-    "last_quran_page": 8
+    "last_quran_page": 9
 }
