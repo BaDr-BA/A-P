@@ -14,7 +14,7 @@ const container = document.getElementById(config.containerId);
 if (container) {
     const grotitle = document.createElement("h1");
     grotitle.style.textAlign = "center";
-    grotitle.textContent = "فهرس المدونة";
+    grotitle.textContent = "أرشيف موقع تقنجي";
     container.appendChild(grotitle);
 }
 
