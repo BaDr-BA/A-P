@@ -12,7 +12,6 @@
         "الرياء الرقمي: وهم السعادة"
     ],
     "adhkar_dates": [
-        "2026-01-01_evening",
         "2026-01-02_morning",
         "2026-01-02_quran_wird",
         "2026-01-02_evening",
@@ -41,7 +40,8 @@
         "2026-01-10_quran_wird",
         "2026-01-10_evening",
         "2026-01-11_morning",
-        "2026-01-11_quran_wird"
+        "2026-01-11_quran_wird",
+        "2026-01-11_evening"
     ],
     "last_quran_page": 14
 }
