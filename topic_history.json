@@ -12,7 +12,6 @@
         "إدمان الشاشات: فقدان الاتصال الحقيقي"
     ],
     "adhkar_dates": [
-        "2026-01-05_quran_wird",
         "2026-01-05_evening",
         "2026-01-06_morning",
         "2026-01-06_quran_wird",
@@ -41,7 +40,8 @@
         "2026-01-14_morning",
         "2026-01-14_quran_wird",
         "2026-01-14_evening",
-        "2026-01-15_morning"
+        "2026-01-15_morning",
+        "2026-01-15_quran_wird"
     ],
-    "last_quran_page": 17
+    "last_quran_page": 18
 }
