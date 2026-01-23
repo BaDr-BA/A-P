@@ -12,7 +12,6 @@
         "الجمعة: بناء مجتمع متراحم"
     ],
     "adhkar_dates": [
-        "2026-01-13_quran_wird",
         "2026-01-13_evening",
         "2026-01-14_morning",
         "2026-01-14_quran_wird",
@@ -41,7 +40,8 @@
         "2026-01-22_morning",
         "2026-01-22_quran_wird",
         "2026-01-22_evening",
-        "2026-01-23_morning"
+        "2026-01-23_morning",
+        "2026-01-23_quran_wird"
     ],
-    "last_quran_page": 25
+    "last_quran_page": 26
 }
