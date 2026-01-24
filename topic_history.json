@@ -12,7 +12,6 @@
         "عوض الصابرين: رضا وفرج قريب"
     ],
     "adhkar_dates": [
-        "2026-01-14_quran_wird",
         "2026-01-14_evening",
         "2026-01-15_morning",
         "2026-01-15_quran_wird",
@@ -41,7 +40,8 @@
         "2026-01-23_morning",
         "2026-01-23_quran_wird",
         "2026-01-23_evening",
-        "2026-01-24_morning"
+        "2026-01-24_morning",
+        "2026-01-24_quran_wird"
     ],
-    "last_quran_page": 26
+    "last_quran_page": 27
 }
