@@ -12,7 +12,6 @@
         "الرزق يأتي بطرق لا تخطر"
     ],
     "adhkar_dates": [
-        "2026-01-24_morning",
         "2026-01-24_quran_wird",
         "2026-01-24_evening",
         "2026-01-25_morning",
@@ -41,7 +40,8 @@
         "2026-02-06_morning",
         "2026-02-06_quran_wird",
         "2026-02-06_evening",
-        "2026-02-07_morning"
+        "2026-02-07_morning",
+        "2026-02-07_quran_wird"
     ],
-    "last_quran_page": 36
+    "last_quran_page": 37
 }
