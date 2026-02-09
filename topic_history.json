@@ -12,7 +12,6 @@
         "سكينة القلب في زمن الفتن"
     ],
     "adhkar_dates": [
-        "2026-01-26_morning",
         "2026-01-26_quran_wird",
         "2026-01-26_evening",
         "2026-01-27_morning",
@@ -41,7 +40,8 @@
         "2026-02-08_morning",
         "2026-02-08_quran_wird",
         "2026-02-08_evening",
-        "2026-02-09_morning"
+        "2026-02-09_morning",
+        "2026-02-09_quran_wird"
     ],
-    "last_quran_page": 38
+    "last_quran_page": 39
 }
