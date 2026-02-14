@@ -12,7 +12,6 @@
         "حسن الظن واليقين: نور الأزمات"
     ],
     "adhkar_dates": [
-        "2026-02-04_morning",
         "2026-02-04_quran_wird",
         "2026-02-04_evening",
         "2026-02-05_morning",
@@ -41,7 +40,8 @@
         "2026-02-13_morning",
         "2026-02-13_quran_wird",
         "2026-02-13_evening",
-        "2026-02-14_morning"
+        "2026-02-14_morning",
+        "2026-02-14_quran_wird"
     ],
-    "last_quran_page": 43
+    "last_quran_page": 44
 }
