@@ -12,7 +12,6 @@
         "الاستغفار: بركة في كل حال"
     ],
     "adhkar_dates": [
-        "2026-02-06_morning",
         "2026-02-06_quran_wird",
         "2026-02-06_evening",
         "2026-02-07_morning",
@@ -41,7 +40,8 @@
         "2026-02-15_morning",
         "2026-02-15_quran_wird",
         "2026-02-15_evening",
-        "2026-02-16_morning"
+        "2026-02-16_morning",
+        "2026-02-16_quran_wird"
     ],
-    "last_quran_page": 45
+    "last_quran_page": 46
 }
