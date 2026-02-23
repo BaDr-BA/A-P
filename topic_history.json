@@ -12,7 +12,6 @@
         "رمضان: تجديد العهد مع القرآن"
     ],
     "adhkar_dates": [
-        "2026-02-13_quran_wird",
         "2026-02-13_evening",
         "2026-02-14_morning",
         "2026-02-14_quran_wird",
@@ -41,7 +40,8 @@
         "2026-02-22_morning",
         "2026-02-22_quran_wird",
         "2026-02-22_evening",
-        "2026-02-23_morning"
+        "2026-02-23_morning",
+        "2026-02-23_quran_wird"
     ],
-    "last_quran_page": 52
+    "last_quran_page": 53
 }
