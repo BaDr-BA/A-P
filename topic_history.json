@@ -12,7 +12,6 @@
         "رمضان: اغتنام الأوقات بالعصر الرقمي"
     ],
     "adhkar_dates": [
-        "2026-02-14_quran_wird",
         "2026-02-14_evening",
         "2026-02-15_morning",
         "2026-02-15_quran_wird",
@@ -41,7 +40,8 @@
         "2026-02-23_morning",
         "2026-02-23_quran_wird",
         "2026-02-23_evening",
-        "2026-02-24_morning"
+        "2026-02-24_morning",
+        "2026-02-24_quran_wird"
     ],
-    "last_quran_page": 53
+    "last_quran_page": 54
 }
