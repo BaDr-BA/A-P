@@ -12,7 +12,6 @@
         "رمضان: حصن الروح والنفس"
     ],
     "adhkar_dates": [
-        "2026-02-16_quran_wird",
         "2026-02-16_evening",
         "2026-02-17_morning",
         "2026-02-17_quran_wird",
@@ -41,7 +40,8 @@
         "2026-02-25_morning",
         "2026-02-25_quran_wird",
         "2026-02-25_evening",
-        "2026-02-26_morning"
+        "2026-02-26_morning",
+        "2026-02-26_quran_wird"
     ],
-    "last_quran_page": 55
+    "last_quran_page": 56
 }
