@@ -12,7 +12,6 @@
         "رمضان: موسم التجديد الروحي"
     ],
     "adhkar_dates": [
-        "2026-02-18_quran_wird",
         "2026-02-18_evening",
         "2026-02-19_morning",
         "2026-02-19_quran_wird",
@@ -41,7 +40,8 @@
         "2026-02-27_morning",
         "2026-02-27_quran_wird",
         "2026-02-27_evening",
-        "2026-02-28_morning"
+        "2026-02-28_morning",
+        "2026-02-28_quran_wird"
     ],
-    "last_quran_page": 57
+    "last_quran_page": 58
 }
