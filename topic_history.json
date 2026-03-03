@@ -12,7 +12,6 @@
         "رمضان: موسم العطاء والتراحم"
     ],
     "adhkar_dates": [
-        "2026-02-21_morning",
         "2026-02-21_quran_wird",
         "2026-02-21_evening",
         "2026-02-22_morning",
@@ -41,7 +40,8 @@
         "2026-03-01_evening",
         "2026-03-02_morning",
         "2026-03-02_quran_wird",
-        "2026-03-02_evening"
+        "2026-03-02_evening",
+        "2026-03-03_morning"
     ],
     "last_quran_page": 60
 }
