@@ -12,7 +12,6 @@
         "بركات الجمعة الرمضانية: أعمال مستحبة"
     ],
     "adhkar_dates": [
-        "2026-02-25_morning",
         "2026-02-25_quran_wird",
         "2026-02-25_evening",
         "2026-02-26_morning",
@@ -41,7 +40,8 @@
         "2026-03-05_evening",
         "2026-03-06_morning",
         "2026-03-06_quran_wird",
-        "2026-03-06_evening"
+        "2026-03-06_evening",
+        "2026-03-07_morning"
     ],
     "last_quran_page": 64
 }
