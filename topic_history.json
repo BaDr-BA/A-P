@@ -12,7 +12,6 @@
         "خير الليالي: جمعة وترية رمضانية"
     ],
     "adhkar_dates": [
-        "2026-03-03_morning",
         "2026-03-03_quran_wird",
         "2026-03-03_evening",
         "2026-03-04_morning",
@@ -41,7 +40,8 @@
         "2026-03-11_evening",
         "2026-03-12_morning",
         "2026-03-12_quran_wird",
-        "2026-03-12_evening"
+        "2026-03-12_evening",
+        "2026-03-13_morning"
     ],
     "last_quran_page": 70
 }
