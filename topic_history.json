@@ -12,7 +12,6 @@
         "كنوز الجمعة في العشر الأواخر"
     ],
     "adhkar_dates": [
-        "2026-03-05_morning",
         "2026-03-05_quran_wird",
         "2026-03-05_evening",
         "2026-03-06_morning",
@@ -41,7 +40,8 @@
         "2026-03-13_evening",
         "2026-03-14_morning",
         "2026-03-14_quran_wird",
-        "2026-03-14_evening"
+        "2026-03-14_evening",
+        "2026-03-15_morning"
     ],
     "last_quran_page": 72
 }
