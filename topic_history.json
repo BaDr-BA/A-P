@@ -12,7 +12,6 @@
         "ليلة القدر: عطاء وتكافل"
     ],
     "adhkar_dates": [
-        "2026-03-08_quran_wird",
         "2026-03-08_evening",
         "2026-03-09_morning",
         "2026-03-09_quran_wird",
@@ -41,7 +40,8 @@
         "2026-03-17_morning",
         "2026-03-17_quran_wird",
         "2026-03-17_evening",
-        "2026-03-18_morning"
+        "2026-03-18_morning",
+        "2026-03-18_quran_wird"
     ],
-    "last_quran_page": 75
+    "last_quran_page": 76
 }
