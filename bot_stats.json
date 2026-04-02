@@ -1,15 +1,15 @@
 {
-    "total_posts": 793,
+    "total_posts": 794,
     "successful_posts": 703,
-    "failed_posts": 90,
+    "failed_posts": 91,
     "adhkar_posts": 288,
-    "content_posts": 394,
+    "content_posts": 395,
     "questions_posts": 110,
-    "last_post_time": "2026-04-02T07:42:15.347458",
+    "last_post_time": "2026-04-02T10:12:44.527682",
     "post_types": {
         "morning": 102,
         "evening": 100,
-        "long": 157,
+        "long": 158,
         "short": 237,
         "question": 110,
         "quran_wird": 86
