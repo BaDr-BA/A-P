@@ -1,13 +1,13 @@
 {
-    "total_posts": 833,
+    "total_posts": 834,
     "successful_posts": 703,
-    "failed_posts": 130,
-    "adhkar_posts": 304,
+    "failed_posts": 131,
+    "adhkar_posts": 305,
     "content_posts": 412,
     "questions_posts": 116,
-    "last_post_time": "2026-04-07T21:59:40.479787",
+    "last_post_time": "2026-04-08T03:33:20.041398",
     "post_types": {
-        "morning": 107,
+        "morning": 108,
         "evening": 106,
         "long": 164,
         "short": 248,
