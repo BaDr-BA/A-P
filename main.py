@@ -231,7 +231,7 @@ def generate_gemini_content_direct(prompt_text, enable_search=False):
     for model in GEMINI_MODELS:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         try:
-            response = requests.post(url, headers=headers, data=json.dumps(data), timeout=35)
+            response = requests.post(url, headers=headers, data=json.dumps(data), timeout=60)
             if response.status_code == 200:
                 result = response.json()
                 candidates = result.get('candidates', [])
@@ -480,9 +480,9 @@ def generate_pollinations_image(prompt):
     يقوم بتوليد الصورة وتحميلها محلياً
     """
     try:
-        # هنا التعديل: جعلنا الحد 800 حرف بدلاً من 200
-        # هذا يسمح بوصف تفصيلي دقيق دون أن يقطع الرابط
-        safe_prompt = requests.utils.quote(prompt[:800]) 
+        # تنظيف النص من السطور الجديدة والمسافات الزائدة وتقليل الطول لتجنب خطأ 404 من السيرفر
+        clean_prompt = prompt.replace('\n', ' ').replace('\r', ' ').strip()
+        safe_prompt = requests.utils.quote(clean_prompt[:400]) 
         
         url = f"https://image.pollinations.ai/prompt/{safe_prompt}?width=1080&height=1080&nologo=true&model=flux"
         # أضفت &model=flux للحصول على جودة أعلى إذا كان متاحاً، أو سيستخدم الافتراضي
