@@ -243,7 +243,8 @@ def generate_gemini_content_direct(prompt_text, enable_search=False):
                         if text:
                             logger.info(f"✅ نجح التوليد بواسطة: {model}")
                             # نطبع أول 100 حرف من المحتوى المولد لنعرف ماذا كتب
-                            logger.info(f"📝 لمحة من المحتوى المولد: {text[:100].replace('\n', ' ')}...")
+                            preview_text = text[:100].replace('\n', ' ')
+                            logger.info(f"📝 لمحة من المحتوى المولد: {preview_text}...")
                             return text
             elif response.status_code in [429, 500, 503]:
                 continue
