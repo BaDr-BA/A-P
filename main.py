@@ -5,6 +5,7 @@ import pytz
 import json
 import os
 import logging
+import re
 from hijridate import Gregorian
 
 # ============== إعدادات اللوج (Logging) ==============
@@ -241,6 +242,8 @@ def generate_gemini_content_direct(prompt_text, enable_search=False):
                         text = parts[0].get('text', "")
                         if text:
                             logger.info(f"✅ نجح التوليد بواسطة: {model}")
+                            # نطبع أول 100 حرف من المحتوى المولد لنعرف ماذا كتب
+                            logger.info(f"📝 لمحة من المحتوى المولد: {text[:100].replace('\n', ' ')}...")
                             return text
             elif response.status_code in [429, 500, 503]:
                 continue
@@ -544,12 +547,22 @@ def post_to_facebook(message, image_path=None):
             if filename.startswith("temp"):
                 os.remove(image_path)
 
-# ============== تنظيف النص ==============
+# ============== تنظيف النص (الفلتر السحري) ==============
 def clean_post_text(text):
-    # إزالة النجوم الخاصة بـ Markdown (Bolding)
+    # 1. إزالة النجوم الخاصة بـ Markdown
     text = text.replace('**', '').replace('*', '')
 
-    # إزالة الفواصل الزائدة (السطور الفاضية الكتير)
+    # 2. فلتر إبادة المسودات الإنجليزية (يحذف أي سطر فيه حروف إنجليزية)
+    lines = text.split('\n')
+    cleaned_lines = []
+    for line in lines:
+        # إذا كان السطر لا يحتوي على أي حرف إنجليزي، نتركه.. غير ذلك نحذفه
+        if not re.search('[a-zA-Z]', line):
+            cleaned_lines.append(line)
+    
+    text = '\n'.join(cleaned_lines)
+
+    # 3. إزالة السطور الفاضية المتبقية من الحذف
     while '\n\n\n' in text:
         text = text.replace('\n\n\n', '\n\n')
 
@@ -920,6 +933,7 @@ def run_bot():
         if post_content and len(post_content) > 10 and "Error" not in post_content:
             cleaned_content = clean_post_text(post_content)
 
+            logger.info(f"📦 جاري النشر الآن... نوع المحتوى المحدد لهذه الدورة: {content_type}")
             # النشر
             success = post_to_facebook(cleaned_content, image_path)
             
