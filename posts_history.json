@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-03-07T18:51:29.262905",
-        "type": "long",
-        "content_preview": "يا بخت اللي قلبه حاسس بفرحة رمضان! مش مجرد صيام وعطش وجوع، دي فرصة العمر اللي بتنور حياتنا من جديد، ...",
-        "success": true
-    },
-    {
         "timestamp": "2026-03-07T21:36:51.476569",
         "type": "long",
         "content_preview": "يا ترى رمضان ده هيعدي زي غيره ولا هنخرج منه ناس تانية خالص؟ كل سنة بنقول \"رمضان كريم\"، بس الأكرم إن ...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-04-18T21:50:33.566117",
         "type": "short",
         "content_preview": "Goal: Write a short religious or faith-based inspiration.\n       Constraint 1: Write the text direct...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-04-18T21:51:55.314010",
+        "type": "short",
+        "content_preview": "Topic: A situation or short story from the Sahaba (Companions of the Prophet) with lessons learned.\n...",
         "success": true
     }
 ]
