@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-03-07T15:39:08.186935",
-        "type": "evening",
-        "content_preview": "مع غروب شمس هذا اليوم، حان وقت أن نجدد أرواحنا بذكر الله. لنجعل قلوبنا تطمئن وتسكن بجميل أذكار المسا...",
-        "success": true
-    },
-    {
         "timestamp": "2026-03-07T18:51:29.262905",
         "type": "long",
         "content_preview": "يا بخت اللي قلبه حاسس بفرحة رمضان! مش مجرد صيام وعطش وجوع، دي فرصة العمر اللي بتنور حياتنا من جديد، ...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-03-20T15:59:58.259285",
         "type": "evening",
         "content_preview": "مع نسمات المساء الهادئة، استقبل ليلتك بذكر الله، ليطمئن قلبك وتسكن روحك وتغشاك الطمأنينة.\n\n✨ أذكار ا...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-04-18T21:50:33.566117",
+        "type": "short",
+        "content_preview": "Goal: Write a short religious or faith-based inspiration.\n       Constraint 1: Write the text direct...",
         "success": true
     }
 ]
