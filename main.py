@@ -5,7 +5,7 @@ import pytz
 import json
 import os
 import logging
-from hijri_converter import Gregorian
+from hijridate import Gregorian
 
 # ============== إعدادات اللوج (Logging) ==============
 # قمنا بتبسيط اللوج ليطبع في شاشة GitHub مباشرة
