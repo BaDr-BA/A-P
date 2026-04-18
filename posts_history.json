@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-03-07T21:36:51.476569",
-        "type": "long",
-        "content_preview": "يا ترى رمضان ده هيعدي زي غيره ولا هنخرج منه ناس تانية خالص؟ كل سنة بنقول \"رمضان كريم\"، بس الأكرم إن ...",
-        "success": true
-    },
-    {
         "timestamp": "2026-03-08T03:12:46.587019",
         "type": "morning",
         "content_preview": "مع كل صباح جديد، تتجدد فينا الأماني والآمال، فلنجعل أولها ذكر الله حصنًا لقلوبنا. لتبدأ يومك ببركة و...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-04-18T21:51:55.314010",
         "type": "short",
         "content_preview": "Topic: A situation or short story from the Sahaba (Companions of the Prophet) with lessons learned.\n...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-04-18T21:53:31.751642",
+        "type": "short",
+        "content_preview": "Task: Write a short religious or faith-based reminder/remembrance (dhikr).\n       Constraint 1: Writ...",
         "success": true
     }
 ]
