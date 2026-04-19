@@ -12,7 +12,6 @@
         "*   Topic: Religious or social issue related to a negative phenomenon/wrong behavior recently spread on social media."
     ],
     "adhkar_dates": [
-        "2026-04-07_morning",
         "2026-04-07_evening",
         "2026-04-08_morning",
         "2026-04-08_evening",
@@ -41,7 +40,8 @@
         "2026-04-18_morning",
         "2026-04-18_quran_wird",
         "2026-04-18_evening",
-        "2026-04-19_morning"
+        "2026-04-19_morning",
+        "2026-04-19_quran_wird"
     ],
-    "last_quran_page": 78
+    "last_quran_page": 79
 }
