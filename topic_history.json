@@ -12,7 +12,6 @@
         "*   Target: A religious or social topic related to The virtue of Friday and the best recommended deeds/worship."
     ],
     "adhkar_dates": [
-        "2026-04-19_quran_wird",
         "2026-04-19_evening",
         "2026-04-20_morning",
         "2026-04-20_evening",
@@ -41,7 +40,8 @@
         "2026-04-29_evening",
         "2026-04-30_morning",
         "2026-04-30_quran_wird",
-        "2026-04-30_evening"
+        "2026-04-30_evening",
+        "2026-05-01_morning"
     ],
     "last_quran_page": 86
 }
