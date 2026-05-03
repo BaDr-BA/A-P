@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-04-18T21:50:33.566117",
-        "type": "short",
-        "content_preview": "Goal: Write a short religious or faith-based inspiration.\n       Constraint 1: Write the text direct...",
-        "success": true
-    },
-    {
         "timestamp": "2026-04-18T21:51:55.314010",
         "type": "short",
         "content_preview": "Topic: A situation or short story from the Sahaba (Companions of the Prophet) with lessons learned.\n...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-05-03T13:50:46.798102",
         "type": "evening",
         "content_preview": "مع سكون المساء، نلوذ بذكر الله لتهدأ الأرواح وتطمئن القلوب. اجعلوا أذكاركم حصناً يحيطكم بالسكينة ونو...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-05-03T16:03:01.437070",
+        "type": "question",
+        "content_preview": "ما هي الآية القرآنية التي شعرت أنها نزلت خصيصاً لتواسي قلبك في أصعب لحظات حياتك؟ شاركونا لنستمد من ب...",
         "success": true
     }
 ]
