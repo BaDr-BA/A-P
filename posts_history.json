@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-03-20T15:59:58.259285",
-        "type": "evening",
-        "content_preview": "مع نسمات المساء الهادئة، استقبل ليلتك بذكر الله، ليطمئن قلبك وتسكن روحك وتغشاك الطمأنينة.\n\n✨ أذكار ا...",
-        "success": true
-    },
-    {
         "timestamp": "2026-04-18T21:50:33.566117",
         "type": "short",
         "content_preview": "Goal: Write a short religious or faith-based inspiration.\n       Constraint 1: Write the text direct...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-05-03T10:16:57.002042",
         "type": "quran_wird",
         "content_preview": "📖 وردك اليومي من القرآن الكريم\nالصفحة رقم: 89\n\n       \"نوروا قلوبكم بوردكم اليومي في الصفحة 89، لتشر...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-05-03T13:50:46.798102",
+        "type": "evening",
+        "content_preview": "مع سكون المساء، نلوذ بذكر الله لتهدأ الأرواح وتطمئن القلوب. اجعلوا أذكاركم حصناً يحيطكم بالسكينة ونو...",
         "success": true
     }
 ]
