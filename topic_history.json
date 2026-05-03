@@ -12,7 +12,6 @@
         "*   Topic: A current religious or social topic based on a *recent real-life story* that carries a strong lesson about Gods compensation (عوض الله) and contentment with fate (الرضا بالقضاء), suitable for peoples current circumstances."
     ],
     "adhkar_dates": [
-        "2026-04-22_evening",
         "2026-04-23_morning",
         "2026-04-23_evening",
         "2026-04-24_morning",
@@ -41,7 +40,8 @@
         "2026-05-02_morning",
         "2026-05-02_quran_wird",
         "2026-05-02_evening",
-        "2026-05-03_morning"
+        "2026-05-03_morning",
+        "2026-05-03_quran_wird"
     ],
-    "last_quran_page": 88
+    "last_quran_page": 89
 }
