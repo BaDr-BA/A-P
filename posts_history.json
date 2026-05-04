@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-04-18T21:53:31.751642",
-        "type": "short",
-        "content_preview": "Task: Write a short religious or faith-based reminder/remembrance (dhikr).\n       Constraint 1: Writ...",
-        "success": true
-    },
-    {
         "timestamp": "2026-04-18T22:35:36.245239",
         "type": "long",
         "content_preview": "Religious and social content creator on Facebook.\nComprehensive and touching supplication (dua) addr...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-05-03T22:02:45.536218",
         "type": "short",
         "content_preview": "حدث أن أعرابياً أقبل على النبي صلى الله عليه وسلم، فجذبه من ردائه جذبة شديدة حتى تركت أثراً في عنقه،...",
+        "success": true
+    },
+    {
+        "timestamp": "2026-05-04T04:11:41.704464",
+        "type": "morning",
+        "content_preview": "مع إشراقة كل صباح، جدد عهدك مع الله بكلمات تريح القلب وتطمئن النفس.\n    فالذكر هو النور الذي يضيء در...",
         "success": true
     }
 ]
