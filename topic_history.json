@@ -12,7 +12,6 @@
         "*   Topic: Religious or social, linked to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions."
     ],
     "adhkar_dates": [
-        "2026-04-26_evening",
         "2026-04-27_morning",
         "2026-04-27_quran_wird",
         "2026-04-27_evening",
@@ -41,7 +40,8 @@
         "2026-05-06_morning",
         "2026-05-06_quran_wird",
         "2026-05-06_evening",
-        "2026-05-07_morning"
+        "2026-05-07_morning",
+        "2026-05-07_quran_wird"
     ],
-    "last_quran_page": 92
+    "last_quran_page": 93
 }
