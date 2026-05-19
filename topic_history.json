@@ -12,7 +12,6 @@
         "*   Topic: Virtue of the blessed Friday (day) and recommended deeds/worship."
     ],
     "adhkar_dates": [
-        "2026-05-08_evening",
         "2026-05-09_morning",
         "2026-05-09_quran_wird",
         "2026-05-09_evening",
@@ -41,7 +40,8 @@
         "2026-05-18_morning",
         "2026-05-18_quran_wird",
         "2026-05-18_evening",
-        "2026-05-19_morning"
+        "2026-05-19_morning",
+        "2026-05-19_quran_wird"
     ],
-    "last_quran_page": 101
+    "last_quran_page": 102
 }
