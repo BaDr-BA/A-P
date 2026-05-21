@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Core requirement: A current religious or social topic linked to a touching interpretation of a Quranic verse that consoles people in lifes pressures, reassures hearts, and increases certainty (*Yaqin*).",
         "*   Topic: A current religious or social issue related to a negative phenomenon or wrong behavior that has recently spread on social media, handled with a loving and compassionate advice style.",
         "*   Objective: Find a current religious or social topic related to a negative phenomenon or wrong behavior spread recently on social media and provide a solution using loving and compassionate advice.",
         "*   Request: A religious or social topic related to a powerful religious sermon that touches reality and talks about thinking well of Allah (Husn al-Zann) and certainty (Yaqin) given current circumstances.",
@@ -9,7 +8,8 @@
         "*   Topic: The virtue of the blessed Friday night and the best recommended deeds and acts of worship in it (فضل ليلة الجمعة المباركة وأفضل الأعمال والعبادات المستحبة فيها).",
         "*   Topic: Virtue of blessed Friday night and best recommended deeds/acts of worship in it.",
         "*   Topic: Virtue of the blessed Friday (day) and recommended deeds/worship.",
-        "*   Topic: Virtue of Friday night coinciding with the first ten days of Dhul-Hijjah, and the best deeds/worship."
+        "*   Topic: Virtue of Friday night coinciding with the first ten days of Dhul-Hijjah, and the best deeds/worship.",
+        "*   Topic: Virtue of blessed Friday coinciding with the first ten days of Dhul-Hijjah, and best recommended deeds/worship."
     ],
     "adhkar_dates": [
         "2026-05-11_morning",
