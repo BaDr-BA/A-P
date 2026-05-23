@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Request: A religious or social topic related to a powerful religious sermon that touches reality and talks about thinking well of Allah (Husn al-Zann) and certainty (Yaqin) given current circumstances.",
         "*   Topic: Religious or social, linked to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions.",
         "*   Goal: Find a current religious or social topic based on a modern real-life story with a strong lesson about Allahs compensation (*Awad*) and contentment with fate (*Rida*) that fits peoples current circumstances.",
         "*   Topic: The virtue of the blessed Friday night and the best recommended deeds and acts of worship in it (فضل ليلة الجمعة المباركة وأفضل الأعمال والعبادات المستحبة فيها).",
@@ -9,7 +8,8 @@
         "*   Topic: Virtue of Friday night coinciding with the first ten days of Dhul-Hijjah, and the best deeds/worship.",
         "*   Topic: Virtue of blessed Friday coinciding with the first ten days of Dhul-Hijjah, and best recommended deeds/worship.",
         "*   Subject: Virtue of Friday coinciding with the first ten days of Dhul-Hijjah, and best recommended acts of worship.",
-        "*   Topic: Virtue of blessed Friday coinciding with the first ten days of Dhul-Hijjah and recommended acts of worship."
+        "*   Topic: Virtue of blessed Friday coinciding with the first ten days of Dhul-Hijjah and recommended acts of worship.",
+        "*   Topic: Virtue of the first ten days of Dhul-Hijjah and recommended acts of worship."
     ],
     "adhkar_dates": [
         "2026-05-12_evening",
