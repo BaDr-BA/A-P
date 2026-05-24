@@ -12,7 +12,6 @@
         "*   Topic: Virtue of the first ten days of Dhul-Hijjah and recommended acts of worship."
     ],
     "adhkar_dates": [
-        "2026-05-13_morning",
         "2026-05-13_evening",
         "2026-05-14_morning",
         "2026-05-14_quran_wird",
@@ -41,7 +40,8 @@
         "2026-05-23_morning",
         "2026-05-23_quran_wird",
         "2026-05-23_evening",
-        "2026-05-24_morning"
+        "2026-05-24_morning",
+        "2026-05-24_quran_wird"
     ],
-    "last_quran_page": 103
+    "last_quran_page": 104
 }
