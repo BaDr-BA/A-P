@@ -12,7 +12,6 @@
         "*   Target: A religious or social topic."
     ],
     "adhkar_dates": [
-        "2026-05-19_evening",
         "2026-05-20_morning",
         "2026-05-20_evening",
         "2026-05-21_morning",
@@ -41,7 +40,8 @@
         "2026-05-30_quran_wird",
         "2026-05-30_evening",
         "2026-05-31_morning",
-        "2026-05-31_evening"
+        "2026-05-31_evening",
+        "2026-06-01_quran_wird"
     ],
-    "last_quran_page": 110
+    "last_quran_page": 111
 }
