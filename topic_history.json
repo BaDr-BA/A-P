@@ -12,7 +12,6 @@
         "*   Task: Find a current religious or social topic related to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions."
     ],
     "adhkar_dates": [
-        "2026-05-26_quran_wird",
         "2026-05-27_morning",
         "2026-05-27_quran_wird",
         "2026-05-28_morning",
@@ -41,7 +40,8 @@
         "2026-06-09_morning",
         "2026-06-09_quran_wird",
         "2026-06-09_evening",
-        "2026-06-10_morning"
+        "2026-06-10_morning",
+        "2026-06-10_quran_wird"
     ],
-    "last_quran_page": 117
+    "last_quran_page": 118
 }
