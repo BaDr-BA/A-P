@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Topic: Strong religious sermon touching on reality, focusing on Husn al-Zann billah (having a good opinion of Allah) and Yaqeen (certainty) amidst current circumstances.",
         "*   Goal: Find a current religious or social topic related to a forgotten Sunnah or neglected worship suitable for the current atmosphere (heat, cold, exams, holidays, financial hardship).",
         "*   Current religious or social topic.",
         "*   Topic: Religious or social current topic related to a positive trend or touching human story about Jabr al-Khawatir (mending hearts/kindness) or Rizq (provision) that happened recently, explaining the lessons learned.",
@@ -9,7 +8,8 @@
         "*   Topic: A current religious or social topic related to a modern real-life story carrying a strong lesson about Gods compensation (Awad Allah) and contentment with fate (Rida), suitable for peoples current conditions.",
         "*   Task: Find a current religious or social topic related to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions.",
         "*   Topic: A negative phenomenon or wrong behavior spreading on social media recently.",
-        "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time."
+        "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
+        "*   Task: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time."
     ],
     "adhkar_dates": [
         "2026-05-29_quran_wird",
