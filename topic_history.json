@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Goal: Find a current religious or social topic related to a forgotten Sunnah or neglected worship suitable for the current atmosphere (heat, cold, exams, holidays, financial hardship).",
         "*   Current religious or social topic.",
         "*   Topic: Religious or social current topic related to a positive trend or touching human story about Jabr al-Khawatir (mending hearts/kindness) or Rizq (provision) that happened recently, explaining the lessons learned.",
         "*   Goal: Find a current religious or social topic related to the most psychological or social problems people in Egypt are complaining about this week and their treatment in the Quran and Sunnah.",
@@ -9,7 +8,8 @@
         "*   Task: Find a current religious or social topic related to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions.",
         "*   Topic: A negative phenomenon or wrong behavior spreading on social media recently.",
         "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
-        "*   Task: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time."
+        "*   Task: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
+        "*   Goal: Find a current religious or social topic related to a positive trend or an inspiring human story about Jabir al-Khawatir (comforting others/mending hearts) or Rizq (sustenance) that happened recently, and explain the lessons learned."
     ],
     "adhkar_dates": [
         "2026-05-29_quran_wird",
