@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Topic: Religious or social current topic related to a positive trend or touching human story about Jabr al-Khawatir (mending hearts/kindness) or Rizq (provision) that happened recently, explaining the lessons learned.",
         "*   Goal: Find a current religious or social topic related to the most psychological or social problems people in Egypt are complaining about this week and their treatment in the Quran and Sunnah.",
         "*   Task: Find a current religious/social topic related to a positive trend or a touching human story about *Jabr al-Khawatir* (mending hearts) or *Rizq* (provision) that happened recently, explaining the lessons learned.",
         "*   Topic: A current religious or social topic related to a modern real-life story carrying a strong lesson about Gods compensation (Awad Allah) and contentment with fate (Rida), suitable for peoples current conditions.",
@@ -9,7 +8,8 @@
         "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
         "*   Task: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
         "*   Goal: Find a current religious or social topic related to a positive trend or an inspiring human story about Jabir al-Khawatir (comforting others/mending hearts) or Rizq (sustenance) that happened recently, and explain the lessons learned.",
-        "*   Goal: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time."
+        "*   Goal: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
+        "*   Request: Find a current religious or social topic related to a simple jurisprudential (fiqh) or creedal (aqidah) piece of information that many are ignorant of and corrects common misconceptions."
     ],
     "adhkar_dates": [
         "2026-05-30_morning",
