@@ -12,7 +12,6 @@
         "*   Topic: Virtue of the Hijri New Year and the best recommended deeds and acts of worship. (فضل رأس السنة الهجرية وأفضل الأعمال والعبادات المستحبة فيها)."
     ],
     "adhkar_dates": [
-        "2026-05-30_quran_wird",
         "2026-05-30_evening",
         "2026-05-31_morning",
         "2026-05-31_evening",
@@ -41,7 +40,8 @@
         "2026-06-13_morning",
         "2026-06-13_evening",
         "2026-06-14_evening",
-        "2026-06-15_quran_wird"
+        "2026-06-15_quran_wird",
+        "2026-06-16_quran_wird"
     ],
-    "last_quran_page": 121
+    "last_quran_page": 122
 }
