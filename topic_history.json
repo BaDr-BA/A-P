@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Topic: A current religious or social topic related to a modern real-life story carrying a strong lesson about Gods compensation (Awad Allah) and contentment with fate (Rida), suitable for peoples current conditions.",
         "*   Task: Find a current religious or social topic related to a simple jurisprudential (Fiqh) or creedal (Aqidah) piece of information that many people ignore and corrects common misconceptions.",
         "*   Topic: A negative phenomenon or wrong behavior spreading on social media recently.",
         "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
@@ -9,7 +8,8 @@
         "*   Goal: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
         "*   Request: Find a current religious or social topic related to a simple jurisprudential (fiqh) or creedal (aqidah) piece of information that many are ignorant of and corrects common misconceptions.",
         "*   Goal: Find a current religious or social topic involving a touching interpretation of a Quranic verse that consoles people facing current life pressures, reassures hearts, and increases certainty (Yaqeen).",
-        "*   Topic: Virtue of the Hijri New Year and the best recommended deeds and acts of worship. (فضل رأس السنة الهجرية وأفضل الأعمال والعبادات المستحبة فيها)."
+        "*   Topic: Virtue of the Hijri New Year and the best recommended deeds and acts of worship. (فضل رأس السنة الهجرية وأفضل الأعمال والعبادات المستحبة فيها).",
+        "*   Target Topic: Current religious or social issue related to the most common psychological or social problems people in Egypt are complaining about this week and their treatment in the Quran and Sunnah."
     ],
     "adhkar_dates": [
         "2026-05-30_evening",
