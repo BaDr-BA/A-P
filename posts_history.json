@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-05-29T10:14:41.001246",
-        "type": "quran_wird",
-        "content_preview": "📖 وردك اليومي من القرآن الكريم\nالصفحة رقم: 109\n\n#سورة_المائدة #القرآن_الكريم #ورد_يومي #تدبر",
-        "success": true
-    },
-    {
         "timestamp": "2026-05-29T16:12:39.274260",
         "type": "long",
         "content_preview": "#جمعة_مباركة\n       #أيام_التشريق\n       #ذكر_الله\n       #طاعات\n       #إسلام\n\n    #جمعة_مباركة #أي...",
@@ -596,6 +590,12 @@
     {
         "timestamp": "2026-06-19T20:04:30.560022",
         "type": "question",
+        "content_preview": "",
+        "success": true
+    },
+    {
+        "timestamp": "2026-06-19T22:16:53.298519",
+        "type": "long",
         "content_preview": "",
         "success": true
     }
