@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Topic: A negative phenomenon or wrong behavior spreading on social media recently.",
         "*   Input: Request for a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
         "*   Task: Find a current religious or social topic related to a comprehensive and touching supplication (Dua) that touches peoples material and psychological needs at this specific time.",
         "*   Goal: Find a current religious or social topic related to a positive trend or an inspiring human story about Jabir al-Khawatir (comforting others/mending hearts) or Rizq (sustenance) that happened recently, and explain the lessons learned.",
@@ -9,7 +8,8 @@
         "*   Goal: Find a current religious or social topic involving a touching interpretation of a Quranic verse that consoles people facing current life pressures, reassures hearts, and increases certainty (Yaqeen).",
         "*   Topic: Virtue of the Hijri New Year and the best recommended deeds and acts of worship. (فضل رأس السنة الهجرية وأفضل الأعمال والعبادات المستحبة فيها).",
         "*   Target Topic: Current religious or social issue related to the most common psychological or social problems people in Egypt are complaining about this week and their treatment in the Quran and Sunnah.",
-        "*   Topic: Virtue of the Blessed Friday and the best recommended deeds and acts of worship in it (فضل يوم الجمعة المبارك وأفضل الأعمال والعبادات المستحبة فيها)."
+        "*   Topic: Virtue of the Blessed Friday and the best recommended deeds and acts of worship in it (فضل يوم الجمعة المبارك وأفضل الأعمال والعبادات المستحبة فيها).",
+        "*   Task: Find a current religious or social topic related to common psychological/social problems in Egypt this week and their treatment in Quran and Sunnah."
     ],
     "adhkar_dates": [
         "2026-06-04_quran_wird",
