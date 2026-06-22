@@ -12,7 +12,6 @@
         "*   Core Request: A current religious or social topic related to a powerful religious sermon that touches reality and speaks about having a good opinion of Allah (Husn al-Zann) and certainty (Yaqeen) under current circumstances."
     ],
     "adhkar_dates": [
-        "2026-06-05_quran_wird",
         "2026-06-05_evening",
         "2026-06-06_morning",
         "2026-06-06_quran_wird",
@@ -41,7 +40,8 @@
         "2026-06-20_morning",
         "2026-06-20_evening",
         "2026-06-21_quran_wird",
-        "2026-06-21_evening"
+        "2026-06-21_evening",
+        "2026-06-22_quran_wird"
     ],
-    "last_quran_page": 126
+    "last_quran_page": 127
 }
