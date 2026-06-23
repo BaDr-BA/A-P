@@ -12,7 +12,6 @@
         "*   Goal: Find a current religious or social topic based on a positive trend or a touching human story about healing hearts (جبر الخواطر) or sustenance (الرزق), explaining the lessons learned."
     ],
     "adhkar_dates": [
-        "2026-06-06_morning",
         "2026-06-06_quran_wird",
         "2026-06-06_evening",
         "2026-06-07_morning",
@@ -41,7 +40,8 @@
         "2026-06-21_quran_wird",
         "2026-06-21_evening",
         "2026-06-22_quran_wird",
-        "2026-06-23_morning"
+        "2026-06-23_morning",
+        "2026-06-23_quran_wird"
     ],
-    "last_quran_page": 127
+    "last_quran_page": 128
 }
