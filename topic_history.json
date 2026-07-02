@@ -12,7 +12,6 @@
         "*   Goal: Find a current religious or social topic related to a forgotten Sunnah or neglected act of worship suitable for current conditions (heat/cold/exams/holidays/financial hardship)."
     ],
     "adhkar_dates": [
-        "2026-06-15_quran_wird",
         "2026-06-16_quran_wird",
         "2026-06-17_quran_wird",
         "2026-06-18_quran_wird",
@@ -41,7 +40,8 @@
         "2026-06-30_evening",
         "2026-07-01_morning",
         "2026-07-01_quran_wird",
-        "2026-07-01_evening"
+        "2026-07-01_evening",
+        "2026-07-02_morning"
     ],
     "last_quran_page": 130
 }
