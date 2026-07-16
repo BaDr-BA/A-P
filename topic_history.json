@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Topic: Virtue of Blessed Friday and best acts of worship.",
         "*   Task: Find a current religious or social topic related to a positive trend or a touching human story about comforting hearts (جبر الخواطر) or sustenance/provision (الرزق) that happened recently, and explain the lessons learned.",
         "*   Goal: Find a current religious or social topic related to a comprehensive and touching supplication (dua) that addresses peoples material and psychological needs in the current time.",
         "*   Target: A religious or social topic related to The virtue of Blessed Friday and the best recommended acts and worships.",
@@ -9,7 +8,8 @@
         "*   Topic: Current religious or social issue regarding the most common psychological or social problems people in Egypt are complaining about *this week* and their treatment in the Quran and Sunnah.",
         "*   User wants a religious or social topic related to: A strong religious sermon touching on reality and talking about good expectations of Allah (حسن الظن بالله) and certainty (اليقين) in light of current circumstances.",
         "*   Topic: A current religious or social issue related to a positive trend or a moving human story about Jabir al-Khawatir (comforting hearts) or Rizq (provision) that happened recently, including lessons learned.",
-        "*   Topic: Current religious or social issue linked to a story/situation from the Prophetic biography (Seerah) that provides consolation/solution for modern stress/anxiety."
+        "*   Topic: Current religious or social issue linked to a story/situation from the Prophetic biography (Seerah) that provides consolation/solution for modern stress/anxiety.",
+        "*   Input request: Find a current religious or social topic related to a strong religious sermon touching on reality and talking about good expectations of Allah (حسن الظن بالله) and certainty (اليقين) in light of current circumstances."
     ],
     "adhkar_dates": [
         "2026-07-05_morning",
