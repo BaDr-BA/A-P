@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-06-27T09:06:09.855207",
-        "type": "question",
-        "content_preview": "",
-        "success": true
-    },
-    {
         "timestamp": "2026-06-27T11:04:49.410879",
         "type": "quran_wird",
         "content_preview": "📖 وردك اليومي من القرآن الكريم\nالصفحة رقم: 129\n\n    حان وقت السكينة.. لا تنسوا وردكم اليومي (الصفحة ...",
@@ -597,6 +591,12 @@
         "timestamp": "2026-07-17T16:35:34.167153",
         "type": "question",
         "content_preview": "",
+        "success": true
+    },
+    {
+        "timestamp": "2026-07-17T19:34:23.517108",
+        "type": "question",
+        "content_preview": "\"لو كنت تملك يقيناً تاماً أن دعاءك في ساعة الاستجابة من يوم الجمعة سيُستجاب الآن، ما هي الدعوة التي ...",
         "success": true
     }
 ]
