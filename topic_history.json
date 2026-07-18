@@ -12,7 +12,6 @@
         "*   Goal: Find a current religious or social topic related to the virtue of Friday (فضل يوم الجمعة) and the best recommended deeds/acts of worship."
     ],
     "adhkar_dates": [
-        "2026-07-07_morning",
         "2026-07-07_quran_wird",
         "2026-07-07_evening",
         "2026-07-08_morning",
@@ -41,7 +40,8 @@
         "2026-07-16_evening",
         "2026-07-17_morning",
         "2026-07-17_quran_wird",
-        "2026-07-17_evening"
+        "2026-07-17_evening",
+        "2026-07-18_morning"
     ],
     "last_quran_page": 137
 }
