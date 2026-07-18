@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Goal: Find a current religious or social topic related to a comprehensive and touching supplication (dua) that addresses peoples material and psychological needs in the current time.",
         "*   Target: A religious or social topic related to The virtue of Blessed Friday and the best recommended acts and worships.",
         "*   Topic: A strong religious sermon touching on reality, focusing on حسن الظن بالله (good expectations of Allah) and اليقين (certainty/conviction) amidst current circumstances.",
         "*   Topic: Current religious or social issue related to a simple jurisprudence (Fiqh) or creedal (Aqidah) point that many are ignorant of and corrects common misconceptions.",
@@ -9,7 +8,8 @@
         "*   Topic: A current religious or social issue related to a positive trend or a moving human story about Jabir al-Khawatir (comforting hearts) or Rizq (provision) that happened recently, including lessons learned.",
         "*   Topic: Current religious or social issue linked to a story/situation from the Prophetic biography (Seerah) that provides consolation/solution for modern stress/anxiety.",
         "*   Input request: Find a current religious or social topic related to a strong religious sermon touching on reality and talking about good expectations of Allah (حسن الظن بالله) and certainty (اليقين) in light of current circumstances.",
-        "*   Goal: Find a current religious or social topic related to the virtue of Friday (فضل يوم الجمعة) and the best recommended deeds/acts of worship."
+        "*   Goal: Find a current religious or social topic related to the virtue of Friday (فضل يوم الجمعة) and the best recommended deeds/acts of worship.",
+        "*   Goal: Find a current religious or social topic related to the most common psychological or social problems people in Egypt are complaining about *this week* and their treatment in the Quran and Sunnah."
     ],
     "adhkar_dates": [
         "2026-07-08_morning",
