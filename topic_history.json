@@ -12,7 +12,6 @@
         "*   Target: A current religious or social topic related to an influential interpretation of a Quranic verse that consoles people in the pressures of current life, reassures hearts, and increases certainty."
     ],
     "adhkar_dates": [
-        "2026-07-11_evening",
         "2026-07-12_morning",
         "2026-07-12_quran_wird",
         "2026-07-12_evening",
@@ -41,7 +40,8 @@
         "2026-07-21_morning",
         "2026-07-21_quran_wird",
         "2026-07-21_evening",
-        "2026-07-22_morning"
+        "2026-07-22_morning",
+        "2026-07-22_quran_wird"
     ],
-    "last_quran_page": 140
+    "last_quran_page": 141
 }
