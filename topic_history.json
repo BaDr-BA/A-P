@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Input request: Find a current religious or social topic related to a strong religious sermon touching on reality and talking about good expectations of Allah (حسن الظن بالله) and certainty (اليقين) in light of current circumstances.",
         "*   Goal: Find a current religious or social topic related to the virtue of Friday (فضل يوم الجمعة) and the best recommended deeds/acts of worship.",
         "*   Goal: Find a current religious or social topic related to the most common psychological or social problems people in Egypt are complaining about *this week* and their treatment in the Quran and Sunnah.",
         "*   Topic: A current religious or social issue related to a positive trend or a moving human story about *Jabir al-Khawatir* (comforting hearts) or *Rizq* (provision) that happened recently, and the lessons learned.",
@@ -9,7 +8,8 @@
         "*   Topic: Religious or social, current, related to a position or story from the Prophetic biography (Seerah) providing consolation and a solution for current distress or anxiety.",
         "*   Target: A current religious or social topic related to an influential interpretation of a Quranic verse that consoles people in the pressures of current life, reassures hearts, and increases certainty.",
         "*   Topic: Current religious or social issue related to the most complained about psychological or social problems in Egypt this week and their cure in the Quran and Sunnah.",
-        "*   Topic: Current religious or social issue related to a forgotten Sunnah or neglected act of worship suitable for current conditions (heat/cold/exams/holidays/economic hardship)."
+        "*   Topic: Current religious or social issue related to a forgotten Sunnah or neglected act of worship suitable for current conditions (heat/cold/exams/holidays/economic hardship).",
+        "*   Topic: The virtue of Friday night (Eve of Friday), and the best deeds and recommended acts of worship during it."
     ],
     "adhkar_dates": [
         "2026-07-13_evening",
