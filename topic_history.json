@@ -1,6 +1,5 @@
 {
     "topics": [
-        "*   Target: A current religious or social topic related to an influential interpretation of a Quranic verse that consoles people in the pressures of current life, reassures hearts, and increases certainty.",
         "*   Topic: Current religious or social issue related to the most complained about psychological or social problems in Egypt this week and their cure in the Quran and Sunnah.",
         "*   Topic: Current religious or social issue related to a forgotten Sunnah or neglected act of worship suitable for current conditions (heat/cold/exams/holidays/economic hardship).",
         "*   Topic: The virtue of Friday night (Eve of Friday), and the best deeds and recommended acts of worship during it.",
@@ -9,7 +8,8 @@
         "*   Topic: A current religious or social issue.",
         "*   Topic: Current religious or social issue related to a positive trend or an influential human story about Jabir al-Khawatir (comforting hearts) or Rizq (provision) that happened recently.",
         "*   Topic: Religious or social issue.",
-        "*   Request: Find a current religious or social topic related to a strong religious sermon that touches reality and speaks about having a good opinion of Allah (Husn al-Zann) and certainty (Yaqeen) amidst current circumstances."
+        "*   Request: Find a current religious or social topic related to a strong religious sermon that touches reality and speaks about having a good opinion of Allah (Husn al-Zann) and certainty (Yaqeen) amidst current circumstances.",
+        "*   Topic: Religious or social, specifically a forgotten Sunnah or neglected worship suitable for current circumstances (Heat/Cold/Exams/Holidays/Economic hardship)."
     ],
     "adhkar_dates": [
         "2026-07-26_evening",
