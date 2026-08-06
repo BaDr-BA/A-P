@@ -12,7 +12,6 @@
         "*   Goal: Find a current religious or social topic."
     ],
     "adhkar_dates": [
-        "2026-07-27_morning",
         "2026-07-27_quran_wird",
         "2026-07-27_evening",
         "2026-07-28_morning",
@@ -41,7 +40,8 @@
         "2026-08-05_morning",
         "2026-08-05_quran_wird",
         "2026-08-05_evening",
-        "2026-08-06_morning"
+        "2026-08-06_morning",
+        "2026-08-06_quran_wird"
     ],
-    "last_quran_page": 154
+    "last_quran_page": 155
 }
