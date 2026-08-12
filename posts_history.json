@@ -1,11 +1,5 @@
 [
     {
-        "timestamp": "2026-07-28T14:40:05.537437",
-        "type": "evening",
-        "content_preview": "✨ أذكار المساء كاملة:\n\n1. قراءة آية الكرسي: {الله لا إله إلا هو الحي القيوم لا تأخذه سنة ولا نوم له ...",
-        "success": true
-    },
-    {
         "timestamp": "2026-07-28T16:54:39.454059",
         "type": "long",
         "content_preview": "#جبر_الخواطر #الرزق #الحمدلله #ثقة_بالله #إيمان",
@@ -595,6 +589,12 @@
     },
     {
         "timestamp": "2026-08-12T16:10:46.173844",
+        "type": "question",
+        "content_preview": "",
+        "success": true
+    },
+    {
+        "timestamp": "2026-08-12T19:28:28.379619",
         "type": "question",
         "content_preview": "",
         "success": true
