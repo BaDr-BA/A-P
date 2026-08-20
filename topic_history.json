@@ -12,7 +12,6 @@
         "*   Request: Find a current religious or social topic linked to a simple jurisprudential (fiqh) or creedal (aqidah) piece of information that corrects common misconceptions."
     ],
     "adhkar_dates": [
-        "2026-08-07_evening",
         "2026-08-08_morning",
         "2026-08-08_evening",
         "2026-08-09_morning",
@@ -41,7 +40,8 @@
         "2026-08-18_morning",
         "2026-08-18_evening",
         "2026-08-19_morning",
-        "2026-08-19_evening"
+        "2026-08-19_evening",
+        "2026-08-20_morning"
     ],
     "last_quran_page": 161
 }
